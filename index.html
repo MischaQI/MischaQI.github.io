@@ -25,14 +25,14 @@
 </head>
 
 <!-- <body onload="startPetCursor();"> -->
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:1100px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:70%;vertical-align:middle">
               <p style="text-align:center">
-                <name>Peng QI</name>
+                <name>Peng QI</name>  &nbsp &nbsp &nbsp  <img src='img/name.jpg' width="80">
               </p>
               <p> I am currently a final-year Ph.D. candidate in the <strong> Institute of Computing Technology </strong>, Chinese Academy of Sciences, supervised by <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/201011/t20101123_3028158.html">Prof. Juan Cao</a>.
                 I have a one-year visiting study in <strong> NExT++ </strong>, National University of Singapore, supervised by <a href="https://www.chuatatseng.com/">Prof. Tat-Seng Chua</a>.
@@ -107,7 +107,7 @@
         <tr>
           <!-- <tr bgcolor="#ffffd0"> -->
               <td style="padding:20px;width:35%;vertical-align:middle">
-                  <img src='img/NEED.jpg' width="250"></div>
+                  <img src='img/NEED.jpg' width="380" ></div>
                       </td>
               <td style="padding:5px;width:75%;vertical-align:middle">
                   <!-- <p> -->
@@ -137,9 +137,9 @@
                   <p>
                   <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
                   This paper proposes a <u>model-agnostic</u> <u>cross-sample</u> framework NEED for detecting fake news videos, 
-                  which utilizes the neighbour relationship 
-                  between the related news videos in a same event and thus can largely improve the performance 
-                  of existing single-sample detectors. This paper is also a successful attempt to combine automatic 
+                  which utilizes the neighbor relationship 
+                  between the related news videos in the same event and thus can largely improve the performance 
+                  of existing single-sample detectors. This paper is a successful attempt to combine automatic 
                   fake news detection and fact-checking, and firstly proves the effectiveness of <u>debunking videos</u> in detection. 
                   </p>
               </td>
@@ -148,7 +148,7 @@
           <tr>
             <!-- <tr bgcolor="#ffffd0"> -->
                 <td style="padding:20px;width:35%;vertical-align:middle">
-                    <img src='img/FakeSV.jpg' width="250"></div>
+                    <img src='img/FakeSV.jpg' width="380" ></div>
                         </td>
                 <td style="padding:5px;width:75%;vertical-align:middle">
                     <!-- <p> -->
@@ -167,12 +167,14 @@
                     Danding Wang,
                     <a href="https://www.chuatatseng.com/">Tat-Seng Chua</a>                                    
                     <br>
-                    <em>AAAI, 2023</em>
-                    <br>
+                    <em>AAAI, 2023</em>  &nbsp &nbsp
+                    <a href="https://arxiv.org/abs/2211.10973">PDF</a> /
+                    <a href="https://github.com/ICTMCG/FakeSV">Code</a> 
+                    <!-- <br> -->
                     </p>
                     <div class="paper" id="SHADE">
-                        <a href="https://arxiv.org/abs/2211.10973">PDF</a> /
-                        <a href="https://github.com/ICTMCG/FakeSV">Code</a> 
+                        <!-- <a href="https://arxiv.org/abs/2211.10973">PDF</a> / -->
+                        <!-- <a href="https://github.com/ICTMCG/FakeSV">Code</a>  -->
                         <!-- / -->
                         <!-- <a href="https://zhuanlan.zhihu.com/p/593927717">知乎</a> -->
                     </div> 
@@ -180,18 +182,139 @@
                     <p></p>
                     <p>
                     <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
-                    <!-- 可以再改改，突出有价值novel的地方 -->
-                    We construct the largest Chinese fake news short video <u> dataset FakeSV</u>, which includes news content, user comments, and publisher profiles simultaneously.
-                    It contains 1,827 fake news videos, 1,827 real news videos and 1,884 debunking videos under 738 events. 
-                    We provide explorary and insightful <u> data analysis</u> from the perspective of news content, social context 
-                    and propagation. Moreover, we design a new <u>multimodal detection model SV-FEND</u> as the SOTA method in this benchmark. 
-                    We also <u>re-implement 11 single-modal and 4 multimodal methods</u> as baseline methods. We have release the dataset and codes to facilitate this task.   
+                    We construct the <u> largest Chinese fake news short video dataset</u>, namely FakeSV.
+                    This dataset contains complete news contents and rich social context under different events, and thus can support a wide range of research tasks related to fake news.
+                    It firstly provides <u> abundant debunking videos </u> accompanying the fake and real news videos. 
+                    We provide exploratory multi-perspective data analysis,
+                     <!-- from the perspective of news content, social context and propagation -->
+                    which reveals some <u>interesting and insightful phenomenons</u>. 
+                    Moreover, we design a new multimodal detection model as the SOTA method in this benchmark. 
+                    We also re-implement 11 single-modal and 4 multimodal methods as baseline methods. 
+                    <!-- The dataset and codes have been released to facilitate the future work.    -->
                     </p>
                 </td>
             </tr> 
 
+            <tr>
+              <!-- <tr bgcolor="#ffffd0"> -->
+                  <td style="padding:20px;width:35%;vertical-align:middle">
+                      <img src='img/EM-FEND.jpg' width="380" ></div>
+                          </td>
+                  <td style="padding:5px;width:75%;vertical-align:middle">
+                      <!-- <p> -->
+                      <!-- <a href="https://arxiv.org/abs/2212.09068"> -->
+                          <papertitle>
+                            Improving Fake News Detection by Using an Entity-enhanced Framework to Fuse Diverse Multimodal Clues
+                          </papertitle>
+                      <!-- </a> -->
+                      <br>
+                      <strong>Peng Qi</strong>,
+                      <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/201011/t20101123_3028158.html">Juan Cao</a>,
+                      <a href="https://lixirong.net/">Xirong Li</a>,  
+                      Huan Liu,
+                      <a href="https://sheng-qiang.github.io/">Qiang Sheng</a>, 
+                      Xiaoyue Mi,
+                      Qin He,
+                      Yongbiao Lv, 
+                      Chenyang Guo, 
+                      Yingchao Yu                                 
+                      <br>
+                      <em>MM, 2021</em> &nbsp &nbsp <a href="https://arxiv.org/pdf/2108.10509">PDF</a> 
+                      <!-- <br> -->
+                      </p>
+                      <div class="paper" id="SHADE">
+                          <!-- <a href="https://arxiv.org/pdf/2108.10509">PDF</a>  -->
+                          <!-- <a href="https://github.com/ICTMCG/FakeSV">Code</a>  -->
+                          <!-- / -->
+                          <!-- <a href="https://zhuanlan.zhihu.com/p/593927717">知乎</a> -->
+                      </div> 
+                      <!-- <br>
+                      <p></p>
+                      <p>
+                      <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
+                      This paper explores three valuable text-image correlations in multimodal fake news: <u>entity inconsistency, mutual enhancement and text complementation</u>.
+                      <!-- , and proposes a unified framework to fuse these multimodal clues simultaneously. To better employ  -->
+                      For better multimodal reasoning, this paper firstly import the <u>visual news entities</u> into multimodal fake news detection, which helps to understand the news-related high-level semantics of images and bridge the high-level semantic correlations of news text and images. 
+                      <!-- Both offline and online evaluations demonstrate the superiority of our model compared to the state of the art. -->
+                      </p>
+                  </td>
+              </tr> 
 
+              <tr>
+                <!-- <tr bgcolor="#ffffd0"> -->
+                    <td style="padding:20px;width:35%;vertical-align:middle">
+                        <!-- <img src='img/FakeSV.jpg' width="250"></div> -->
+                            </td>
+                    <td style="padding:5px;width:75%;vertical-align:middle">
+                        <!-- <p> -->
+                        <!-- <a href="https://arxiv.org/abs/2212.09068"> -->
+                            <papertitle>
+                              Exploring the Role of Visual Content in Fake News Detection
+                            </papertitle>
+                        <!-- </a> -->
+                        <br>
+                        <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/201011/t20101123_3028158.html">Juan Cao</a>,
+                        <strong>Peng Qi</strong>,
+                        <a href="https://sheng-qiang.github.io/">Qiang Sheng</a>, 
+                        Tianyun Yang,
+                        Junbo Guo, 
+                        <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>                              
+                        <br>
+                        <em>Disinformation, Misinformation, and Fake News in Social Media: Emerging Research Challenges and Opportunities (Book), 2020</em> &nbsp &nbsp <a href="https://arxiv.org/pdf/2003.05096">PDF</a>
+                        <!-- <br> -->
+                        </p>
+                        <div class="paper" id="SHADE">
+                            <!-- <a href="https://arxiv.org/pdf/2003.05096">PDF</a>  -->
+                            <!-- <a href="https://github.com/ICTMCG/FakeSV">Code</a>  -->
+                            <!-- / -->
+                            <!-- <a href="https://zhuanlan.zhihu.com/p/593927717">知乎</a> -->
+                        </div> 
+                        <!-- <br>
+                        <p></p>
+                        <p>
+                        <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
+                        This chapter presents a comprehensive review of the visual content in fake news, including the basic concepts, effective visual features, representative detection methods and challenging issues of multimedia fake news detection.
+                        </p>
+                    </td>
+                </tr>   
 
+              <tr>
+                <!-- <tr bgcolor="#ffffd0"> -->
+                    <td style="padding:20px;width:35%;vertical-align:middle">
+                        <img src='img/MVNN.jpg' width="380" ></div>
+                            </td>
+                    <td style="padding:5px;width:75%;vertical-align:middle">
+                        <!-- <p> -->
+                        <!-- <a href="https://arxiv.org/abs/2212.09068"> -->
+                            <papertitle>
+                              Exploiting Multi-domain Visual Information for Fake News Detection
+                            </papertitle>
+                        <!-- </a> -->
+                        <br>
+                        <strong>Peng Qi</strong>,
+                        <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/201011/t20101123_3028158.html">Juan Cao</a>,
+                        Tianyun Yang,
+                        Junbo Guo, 
+                        <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>                              
+                        <br>
+                        <em>ICDM, 2019</em> &nbsp &nbsp  <a href="https://arxiv.org/pdf/1908.04472">PDF</a>  &nbsp &nbsp <em><font color=#FA8072>Citation: 100+</font></em>
+                        <!-- <br> -->
+                        </p>
+                        <div class="paper" id="SHADE">
+                            <!-- <a href="https://arxiv.org/pdf/1908.04472">PDF</a>  -->
+                            <!-- <a href="https://github.com/ICTMCG/FakeSV">Code</a>  -->
+                            <!-- / -->
+                            <!-- <a href="https://zhuanlan.zhihu.com/p/593927717">知乎</a> -->
+                        </div> 
+                        <!-- <br>
+                        <p></p>
+                        <p>
+                        <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
+                          This paper firstly analyze the images in fake news from both the <u>physical and semantic levels</u>, and thus propose a two-stream neural network which fuses the <u>frequency and pixel domains</u> information. 
+                          <!-- Extensive experiments prove that the multi-domain visual feature performs better than existing visual modeling methods in detecting fake news, and can be applied to various multimodal detection frameworks to yield significant performance.  -->
+                        </p>
+                    </td>
+                </tr> 
 
 
          
@@ -211,10 +334,51 @@
           </tr>
         </tbody></table> -->
 
+        
+
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> 
 
-
+          <tr>
+            <!-- <tr bgcolor="#ffffd0"> -->
+                <td style="padding:20px;width:35%;vertical-align:middle">
+                    <img src='img/videosurvey.jpg' width="380" ></div>
+                        </td>
+                <td style="padding:5px;width:75%;vertical-align:middle">
+                    <!-- <p> -->
+                    <!-- <a href="https://arxiv.org/abs/2212.09068"> -->
+                        <papertitle>
+                          Combating Online Misinformation Videos: Characterization, Detection, and Future Directions
+                        </papertitle>
+                    <!-- </a> -->
+                    <br>
+                    Yuyan Bu, 
+                    <a href="https://sheng-qiang.github.io/">Qiang Sheng</a>, 
+                    <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/201011/t20101123_3028158.html">Juan Cao</a>,
+                    <strong>Peng Qi</strong>,
+                    Danding Wang,
+                    <a href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>                              
+                    <br>
+                    <em>arxiv, 2023</em> &nbsp &nbsp
+                    <a href="https://arxiv.org/pdf/2302.03242">PDF</a> 
+                    <!-- <br> -->
+                    </p>
+                    <div class="paper" id="SHADE">
+                        <!-- <a href="https://arxiv.org/pdf/2302.03242">PDF</a>  -->
+                        <!-- <a href="https://github.com/ICTMCG/FakeSV">Code</a>  -->
+                        <!-- / -->
+                        <!-- <a href="https://zhuanlan.zhihu.com/p/593927717">知乎</a> -->
+                    </div> 
+                    <!-- <br>
+                    <p></p>
+                    <p>
+                    <!-- <em>Extension of our ECCV 2022 paper (SHADE).</em> -->
+                    This paper is the first comprehensive survey targeted at combating online misinformation videos.   
+                    <!-- This survey firstly systematically review the advances in misinformation video detection. -->
+                    <!-- presents a comprehensive review of the visual content in fake news, including the basic concepts, effective visual features, representative detection methods and challenging issues of multimedia fake news detection. -->
+                    </p>
+                </td>
+            </tr> 
 
 
         </tbody></table>
@@ -276,6 +440,7 @@
           <tr>
             <td style="padding:0px">
               <br>
+              <p style="text-align:right;">Last updated: 08 May 2023</p>
               <p style="text-align:right;">Stolen from <a href="https://jonbarron.info/">Jon Barron</a></p>
             </td>
           </tr>
