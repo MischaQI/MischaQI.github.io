@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Animate124: Animating One Image to 4D Dynamic Scene.">
+  <meta name="keywords" content="3D Generation, AIGC, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SNIFFER</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/style.css"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="./assets/images/panda-dance.jpg"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Shantell+Sans" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+  <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.27.0/gradio.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://pengqi.site">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/ICTMCG/FakeSV">
+            FakeSV
+          </a>
+          <a class="navbar-item" href="https://github.com/ICTMCG/NEED">
+            NEED
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-1 "> <img src='./assets/images/logo.png' width="70"> SNIFFER: Multimodal Large Language Model for Explainable Out-of-Context Misinformation Detection </h2> 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://pengqi.site">Peng Qi</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=GkUGt0cAAAAJ&hl=en">Zehong Yan</a>,</span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~whsu/">Wynne Hsu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~leeml/">Mong Li Lee</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">National University of Singapore</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2311.14603"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="*"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="*" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Demo (upcoming)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="*" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-share-square"></i>
+                  </span>
+                  <span>Model (upcoming)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/HeliosZhao/Animate124"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span> -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h4 class="subtitle has-text-centered">
+        🔥<span style="color: #ff3860">[NEW!]</span> LLaVA-1.5 achieves SoTA on 11 benchmarks, with just simple modifications to the original LLaVA, utilizes all public data, completes training in ~1 day on a single 8-A100 node, and surpasses methods that use billion-scale data.
+        <br><br>
+        LLaVA represents a novel end-to-end trained large multimodal model that combines a vision encoder and Vicuna
+        for general-purpose visual and language understanding,
+        achieving impressive chat capabilities mimicking spirits of the multimodal GPT-4 and setting a new state-of-the-art accuracy on Science QA.
+      </h4>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section"  style="background-color:#efeff081">
+  <div class="container is-max-desktop" id="gradio">
+    <gradio-app src="https://llava.hliu.cc"></gradio-app>
+  </div>
+</section> -->
+
+
+
+<section>
+  <div class="container is-max-desktop">
+    <!-- Framework. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <img src="assets/images/introcase.jpg" width="2048">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" style="background-color:#efeff081">
+      <!-- <div class="column is-four-fifths"> -->
+        <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Misinformation is a prevalent societal issue due to its potential high risks. Out-Of-Context (OOC) misinformation, where authentic images are repurposed with false text, is one of the easiest and most effective ways to mislead audiences. Current methods focus on assessing imagetext consistency but lack convincing explanations for their judgments, which is essential for debunking misinformation. While Multimodal Large Language Models (MLLMs) have rich knowledge and innate capability for visual reasoning and explanation generation, they still lack sophistication in understanding and discovering the subtle crossmodal differences. In this paper, we introduce SNIFFER, a novel multimodal large language model specifically engineered for OOC misinformation detection and explanation. SNIFFER employs two-stage instruction tuning on InstructBLIP. The first stage refines the model's concept alignment of generic objects with news-domain entities and the second stage leverages language-only GPT-4 generated OOC-specific instruction data to fine-tune the model's discriminatory powers. Enhanced by external tools and retrieval, SNIFFER not only detects inconsistencies between text and image but also utilizes external knowledge for contextual verification. Our experiments show that SNIFFER surpasses the original MLLM by over 40% and outperforms state-of-the-art methods in detection accuracy. SNIFFER also provides accurate and persuasive explanations as validated by quantitative and human evaluations.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </section>
+<section>
+  <div class="container is-max-desktop">
+    <!-- Framework. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Framework</h2>
+        <div class="content has-text-centered">
+          <img src="assets/images/framework.jpg" width="2048">
+        </div>
+        <div class="content has-text-justified">
+          Architecture of the proposed framework SNIFFER. For a given image-text pair, SNIFFER conducts a two-pronged analysis: (1) it checks the consistency of the image and text content (<i><font color="##5071be">internal checking</font></i>), and (2) it examines the relevance between the context of the retrieved image and the provided text (<i><font color="#e08c51">external checking</font></i>). The outcomes of both these verification processes are then considered by S NIFFER to arrive at a final judgment and explanation.
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qi2023sniffer,
+  author    = {Qi, Peng and Yan, Zehong and Hsu, Wynne and Lee, Mong Li},
+  title     = {SNIFFER: Multimodal Large Language Model for Explainable Out-of-Context Misinformation Detection},
+  journal   = {arXiv preprint arXiv:},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/HeliosZhao/Animate124" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is adapted from  <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks for the great work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
