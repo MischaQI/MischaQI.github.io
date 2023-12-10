@@ -163,7 +163,7 @@ body {
   color: black;
   padding: 10px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   font-size: 0.9em;
   margin-top: -20px;
   margin-bottom: 20px;
@@ -172,3 +172,7 @@ body {
   font-weight: bold;
 }
 
+.reduced-margin {
+  margin-left: -20px; /* Adjust as needed */
+  margin-right: -20px; /* Adjust as needed */
+}

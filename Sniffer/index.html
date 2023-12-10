@@ -219,7 +219,7 @@
         <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Misinformation is a prevalent societal issue due to its potential high risks. Out-Of-Context (OOC) misinformation, where authentic images are repurposed with false text, is one of the easiest and most effective ways to mislead audiences. Current methods focus on assessing imagetext consistency but lack convincing explanations for their judgments, which is essential for debunking misinformation. While Multimodal Large Language Models (MLLMs) have rich knowledge and innate capability for visual reasoning and explanation generation, they still lack sophistication in understanding and discovering the subtle crossmodal differences. In this paper, we introduce SNIFFER, a novel multimodal large language model specifically engineered for OOC misinformation detection and explanation. SNIFFER employs two-stage instruction tuning on InstructBLIP. The first stage refines the model's concept alignment of generic objects with news-domain entities and the second stage leverages language-only GPT-4 generated OOC-specific instruction data to fine-tune the model's discriminatory powers. Enhanced by external tools and retrieval, SNIFFER not only detects inconsistencies between text and image but also utilizes external knowledge for contextual verification. Our experiments show that SNIFFER surpasses the original MLLM by over 40% and outperforms state-of-the-art methods in detection accuracy. SNIFFER also provides accurate and persuasive explanations as validated by quantitative and human evaluations.
+          Misinformation is a prevalent societal issue due to its potential high risks. Out-Of-Context (OOC) misinformation, where authentic images are repurposed with false text, is one of the easiest and most effective ways to mislead audiences. Current methods focus on assessing image-text consistency but lack convincing explanations for their judgments, which is essential for debunking misinformation. While Multimodal Large Language Models (MLLMs) have rich knowledge and innate capability for visual reasoning and explanation generation, they still lack sophistication in understanding and discovering the subtle crossmodal differences. In this paper, we introduce SNIFFER, a novel multimodal large language model specifically engineered for OOC misinformation detection and explanation. SNIFFER employs two-stage instruction tuning on InstructBLIP. The first stage refines the model's concept alignment of generic objects with news-domain entities and the second stage leverages language-only GPT-4 generated OOC-specific instruction data to fine-tune the model's discriminatory powers. Enhanced by external tools and retrieval, SNIFFER not only detects inconsistencies between text and image but also utilizes external knowledge for contextual verification. Our experiments show that SNIFFER surpasses the original MLLM by over 40% and outperforms state-of-the-art methods in detection accuracy. SNIFFER also provides accurate and persuasive explanations as validated by quantitative and human evaluations.
         </div>
       </div>
     </div>
@@ -230,7 +230,8 @@
     <!-- Framework. -->
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Framework</h2>
+        <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Framework</h2>
+        <!-- <h2 class="title is-3">Framework</h2> -->
         <div class="content has-text-centered">
           <img src="assets/images/framework.jpg" width="2048">
         </div>
@@ -241,6 +242,42 @@
     </div>
   </div>
   </section>
+
+<section class="section">
+    <!-- Results. -->
+
+
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/5886/5886212.png"> Multimodal Instrucion-Following Data</h2>
+      </div>
+    </div>
+    <div class="columns is-vcentered is-centered" style="margin-left: -0.75rem; margin-right: -0.75rem;">
+      <!-- Set 1 -->
+      <div class="column is-5" style="padding-right: 0.5rem; padding-left: 0.5rem;">
+        <div class="columns is-vcentered is-centered">
+          <div class="column is-narrow has-text-centered">
+            <img src="assets/images/process.jpg" style="width: auto; max-width: 30%;">
+          </div>
+        </div>
+        <div class="has-text-centered">
+          <p class="caption">Instruction Tuning Process</p>
+        </div>
+      </div>
+      <!-- Set 2 -->
+      <div class="column is-5" style="padding-right: 0.5rem; padding-left: 0.5rem;">
+        <div class="columns is-vcentered is-centered">
+          <div class="column is-narrow has-text-centered">
+            <img src="assets/images/oocdata.jpg" style="width: auto; max-width: 35%;">
+          </div>
+        </div>
+        <div class="has-text-centered">
+          <p class="caption">Task-Specific Instruction Construction<br>(with judgment and explanation)</p>
+        </div>
+      </div>
+    </div>
+    
+</section>
 
 
 
@@ -272,7 +309,7 @@
       <div class="column is-8">
         <div class="content has-text-centered">
           <p>
-            This website is adapted from  <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks for the great work.
+            This website is adapted from  <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a href="https://llava-vl.github.io">LLaVA</a>. Thanks for the great work.
           </p>
         </div>
       </div>
